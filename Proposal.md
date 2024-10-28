@@ -30,17 +30,20 @@ if the player’s final score if less than 8 they will lose the game.
 -  Add an extra color which would be worth 5 points but there would only be one on the board.
 
 ### Pseudocode:�
-- Step 1: when a user selects a bet option it should be recognized as their bet choice
-- Step 2: When a user then select a square on the board it should be recognized as where the user wants to place their bet.
-- Step 3: After bet is evaluated user should see their score update
--  Make it a 2 player game
--  Add an extra color which would be worth 5 points but there would be only one on the board.
 
-### Pseudocode:�
-- Step 1: when a user selects a bet option it should be recognized as their bet choice
-- Step 2: When a user then select a square on the board it should be recognized as where the user wants to place their bet choice
-- Step 3: after bet is evaluated user should see their score update
-- Step 4: At the end of the game user sees �a message based on their final score. 
+- Step 1: set variables for the Player, Board, Bet, Player's Choice, the Score Display, and the game's Final Message, Restart Game
+- Step 2: Cache the Player's Bet, Choice, Message, Restart Button
+- Step 3: Handle Player Click on Bet and Choice on board
+- Step 4: Evoke Functions that will evaluate players bet, board choice, win, loss and score
+          create win and loss strategies
+          if player selects red and random choice on board is red, player gets pointsAdded 
+          if player selects red and random choice on board is blue, player gets PointReduced
+          if player selects blue and random choice on board is blue, player gets pointsAdded 
+          if player selects blue and random choice on board is red, player gets PointReduced 
+- Step 5: Create event listeners to allowing player to click  bet, choices and restart game
+- step 6: Calculate players points in Score as game is being played.   
+- Step 7: Display Final Message for if score is equal or greater than 8
+                   Message for when score is less than 8 
 
 ![7D0A9AA1-AB2F-4E15-A2D2-0B7E58E294F5](https://github.com/user-attachments/assets/2c8a8b5e-314f-41ba-9800-b05946a6891a)
 
@@ -58,5 +61,7 @@ if the player’s final score if less than 8 they will lose the game.
 | Sunday      |   | Work on stretch goals              |          |                 |
 | Monday      |   | Review and fix bugs if any         |          |                 |
 | Tuesday     |   | VOTE!                              |          |                 |
-| Wednesday   |   | Present                            |          |                 |
+| Wednesday   |   | Run last test                      |          |                 |
+| Thursdat    |   | Present                            |          |                 |
+
 
