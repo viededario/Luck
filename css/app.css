@@ -1,0 +1,208 @@
+
+body{
+    background-color: rgba(7, 7, 7, 0.506);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    font: DynaPuff;
+}
+
+h1.titleLuck {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: co;
+
+}
+
+
+
+#betPieces {
+    display: flex;
+    justify-content: center;
+}
+
+#betBtn {
+    display: flex;
+    justify-content: center;
+
+}
+
+#board {
+    display: flex;
+    justify-content: center;
+}
+
+.ribeye-regular {
+    font-family: "Ribeye", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .goal {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    font-family: "Ribeye", serif;
+    font-weight: 0px;
+    margin: 20px;
+
+  }
+
+.inst{
+    text-align: center;
+    font-family: "Ribeye", serif;
+
+}
+
+.titleLuck{
+    display: inline-flex;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: "Ribeye", serif;
+}
+
+.betPick{
+    text-align: center;
+    padding: 10px;
+}
+
+#placeBet{
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+
+.board{
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    padding: 10px;
+    /* margin-left: 570px; */
+    }
+
+
+
+
+.first{
+
+    width: 23%;
+    text-align: center;
+    border: 3px solid black;    
+    font-size: 40px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+/* border: 2px solid white;
+block-size: in;
+border-radius: 5vh;} */
+
+
+
+.bet{
+    display: inline-flex;
+    flex-direction: row;
+    font-size: 50px;
+    width: 300px;
+    justify-content: center; 
+    background-color: ;
+    cursor: pointer;
+    /* margin-left: 577px; */
+
+}
+
+.blue{
+    
+    width: 69px;
+    height: 69px;
+    text-align: center;
+    border: 3px solid black;
+    font-size: 40px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+
+
+    }
+    
+ .red{
+    width: 69px;
+    height: 69px;
+    text-align: center;
+    border: 3px solid black;
+    font-size: 40px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+
+    }
+
+.white{
+    background-color: black;
+}
+
+.black{
+    background-color: white;
+}
+
+
+
+section.board {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+p{
+    font-size: 20px;
+}
+
+.btn {
+    padding: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+.betbBtn {
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.replayBtn {
+    cursor: pointer;
+}
+
+
+
+div.scoreDisplay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Ribeye", serif;
+    border: 10px;
+    border-color: black;
+
+}
