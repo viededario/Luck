@@ -16,7 +16,7 @@ if the player’s final score if less than 8 they will lose the game.
  
   User Stories
 - AAU I should be able to see the objective of the game 
-- AAU I should be able to see and select my bets options.�
+- AAU I should be able to see and select my bet options.�
 - AAU I should be able to select where on the board I want to place my bet.�
 - AAU I should be able to see my score�
 - AAU I should be able to see a message based on my final score.

@@ -1,6 +1,6 @@
 
 body{
-    background-color: rgba(7, 7, 7, 0.506);
+    background-color: rgba(244, 236, 236, 0.992);
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -82,8 +82,8 @@ h1.titleLuck {
 .board{
     display: flex;
     flex-wrap: wrap;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     justify-content: center;
     padding: 10px;
     /* margin-left: 570px; */
@@ -121,14 +121,13 @@ border-radius: 5vh;} */
     justify-content: center; 
     background-color: ;
     cursor: pointer;
-    /* margin-left: 577px; */
-
+    margin-bottom: 20px;
 }
 
 .blue{
     
-    width: 69px;
-    height: 69px;
+    width: 100px;
+    height: 100px;
     text-align: center;
     border: 3px solid black;
     font-size: 40px;
@@ -143,8 +142,22 @@ border-radius: 5vh;} */
     }
     
  .red{
-    width: 69px;
-    height: 69px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border: 3px solid black;
+    font-size: 40px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(63, 61, 61);
+
+    }
+ .purple {
+    width: 100px;
+    height: 100px;
     text-align: center;
     border: 3px solid black;
     font-size: 40px;
@@ -155,14 +168,15 @@ border-radius: 5vh;} */
     align-items: center;
     background-color: black;
 
-    }
+ }
+
 
 .white{
     background-color: black;
 }
 
 .black{
-    background-color: white;
+    background-color: rgb(63, 61, 61);
 }
 
 
@@ -178,23 +192,42 @@ p{
 }
 
 .btn {
-    padding: 10px;
+    /* padding: 10px;
     display: flex;
     align-content: center;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-    flex-direction: column;
+    flex-direction: column; */
+    padding: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-evenly;
+    
 }
 .betbBtn {
     cursor: pointer;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+    border-radius: 8px;
+
 }
 
 .replayBtn {
     cursor: pointer;
+    border-radius: 8px;
 }
 
+
+.onePlayer {
+    border-radius: 8px;
+}
+
+
+.twoPlayers {
+    border-radius: 8px;
+}
 
 
 div.scoreDisplay{

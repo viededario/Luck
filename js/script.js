@@ -10,17 +10,18 @@ let chosenSpots = new Set(); // prevent multiple bets at the same spot
 /*------------------------ Cached Element References ------------------------*/
 const blueBet = document.querySelector(".blue");
 const redBet = document.querySelector(".red");
+const purpleBet = document.querySelector(".purple")
 const boardChoices = document.querySelectorAll(".first");
 const betButton = document.querySelector(".betbBtn");
 const replayButton = document.querySelector(".replayBtn");
 const scoreDisplay = document.querySelector(".scoreDisplay");
 const scoreText = document.createElement("span");
-scoreText.textContent = `Score: ${score}`;
-scoreDisplay.appendChild(scoreText);
+
 
 /*------------------------ Event Listeners ------------------------*/
 blueBet.addEventListener("click", () => selectBetColor("🟦", blueBet));
 redBet.addEventListener("click", () => selectBetColor("🟥", redBet));
+purpleBet.addEventListener("click", () => selectBetColor("🟪", purpleBet));
 
 boardChoices.forEach((choice, index) => {
   choice.addEventListener("click", () => selectBoardColor(index, choice));
@@ -30,6 +31,7 @@ betButton.addEventListener("click", placeBet);
 replayButton.addEventListener("click", resetGame);
 
 /*-------------------------------- Setup Hidden Colors --------------------------------*/
+
 function setUpHiddenColors() {
   hiddenColors = [];
   boardChoices.forEach(() => {
@@ -40,17 +42,19 @@ function setUpHiddenColors() {
 
 // /*-------------------------------- Functions --------------------------------*/
 
+
+
 function selectBetColor(color, element) {
   selectedBetColor = color;
   blueBet.style.border = "";
   redBet.style.border = "";
-  element.style.border = "3px solid purple";
+  element.style.border = "5px solid red";
 }
 
 function selectBoardColor(index, element) {
   selectedBoardColor = index;
   boardChoices.forEach((choice) => (choice.style.border = ""));
-  element.style.border = "3px solid purple";
+  element.style.border = "5px solid red";
 }
 
 function placeBet() {
@@ -98,12 +102,14 @@ function resetGame() {
   setUpHiddenColors();
   boardChoices.forEach((choice) => {
     choice.textContent = choice.classList.contains("black") ? "⬛" : "⬜";
-    // choice.style.border = "";
   });
   scoreDisplay.textContent = "Score: ";
   scoreDisplay.appendChild(scoreText);
   updateScore();
 }
+
+scoreText.textContent = `Score: ${score}`;
+scoreDisplay.appendChild(scoreText);
 
 setUpHiddenColors();
 updateScore();
