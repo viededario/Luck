@@ -1,6 +1,6 @@
 
 body{
-    background-color: rgba(244, 236, 236, 0.992);
+    background-color: rgb(179, 179, 173);
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -202,14 +202,14 @@ p{
     padding: 10px;
     display: flex;
     flex-wrap: nowrap;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: space-evenly;
-    
+    flex-direction: column;
+align-items: center;
+    justify-content: end;
 }
+
 .betbBtn {
     cursor: pointer;
-    /* margin-bottom: 10px; */
+    margin-bottom: 10px;
     border-radius: 8px;
 
 }
@@ -222,11 +222,13 @@ p{
 
 .onePlayer {
     border-radius: 8px;
+    /* cursor: pointer; */
 }
 
 
 .twoPlayers {
     border-radius: 8px;
+    /* cursor: pointer; */
 }
 
 

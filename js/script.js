@@ -10,23 +10,27 @@ let chosenSpots = new Set(); // prevent multiple bets at the same spot
 /*------------------------ Cached Element References ------------------------*/
 const blueBet = document.querySelector(".blue");
 const redBet = document.querySelector(".red");
-const purpleBet = document.querySelector(".purple")
+const purpleBet = document.querySelector(".purple");
 const boardChoices = document.querySelectorAll(".first");
 const betButton = document.querySelector(".betbBtn");
 const replayButton = document.querySelector(".replayBtn");
 const scoreDisplay = document.querySelector(".scoreDisplay");
 const scoreText = document.createElement("span");
 
-
 /*------------------------ Event Listeners ------------------------*/
+// Caching bet options
 blueBet.addEventListener("click", () => selectBetColor("🟦", blueBet));
 redBet.addEventListener("click", () => selectBetColor("🟥", redBet));
 purpleBet.addEventListener("click", () => selectBetColor("🟪", purpleBet));
 
+
+// Caching All Board Pieces
 boardChoices.forEach((choice, index) => {
   choice.addEventListener("click", () => selectBoardColor(index, choice));
 });
 
+
+// Cached Buttons
 betButton.addEventListener("click", placeBet);
 replayButton.addEventListener("click", resetGame);
 
@@ -34,20 +38,27 @@ replayButton.addEventListener("click", resetGame);
 
 function setUpHiddenColors() {
   hiddenColors = [];
-  boardChoices.forEach(() => {
-    const color = Math.random() > 0.5 ? "🟥" : "🟦";
-    hiddenColors.push(color);
+
+  // Math.floor randomly determine the index for the single 🟪 applies it once
+  const purpleIndex = Math.floor(Math.random() * boardChoices.length);
+
+  boardChoices.forEach((_, index) => {
+    if (index === purpleIndex) {
+      hiddenColors.push("🟪");
+    } else {
+      const color = Math.random() > 0.5 ? "🟥" : "🟦";
+      hiddenColors.push(color);
+    }
   });
 }
-
-// /*-------------------------------- Functions --------------------------------*/
-
-
+// Math.random randomizing all other pieces on board
+/*-------------------------------- Functions --------------------------------*/
 
 function selectBetColor(color, element) {
   selectedBetColor = color;
   blueBet.style.border = "";
   redBet.style.border = "";
+  purpleBet.style.border = "";
   element.style.border = "5px solid red";
 }
 
@@ -68,9 +79,11 @@ function placeBet() {
   chosenSpots.add(selectedBoardColor);
 
   if (chosenColor === selectedBetColor) {
-    score++;
+    // If correct, award points based on color
+    score += chosenColor === "🟪" ? 5 : 1;
   } else {
-    score--;
+    // If incorrect, deduct points based on color
+    score -= selectedBetColor === "🟪" ? 5 : 1;
   }
 
   updateScore();
@@ -87,9 +100,9 @@ function updateScore() {
 
 function displayEndMessage() {
   if (score >= 8) {
-    scoreDisplay.textContent = "You Won! You Are A Lucky One!";
+    scoreDisplay.textContent = `Score: ${score} — You Won! You Are A Lucky One!`;
   } else {
-    scoreDisplay.textContent = "You Lost, Better Luck Next Time!";
+    scoreDisplay.textContent = `Score: ${score} — You Lost, Better Luck Next Time!`;
   }
 }
 
