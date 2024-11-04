@@ -7,6 +7,14 @@ body {
   font: DynaPuff;
 }
 
+
+.ribeye-regular {
+  font-family: "Ribeye", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 h1.titleLuck {
   display: flex;
   align-items: center;
@@ -14,6 +22,26 @@ h1.titleLuck {
   justify-content: center;
   flex-direction: co;
 }
+
+.goal {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  font-family: "Ribeye", serif;
+  font-weight: 0px;
+  margin: 20px;
+}
+
+
+.titleLuck {
+  display: inline-flex;
+  align-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: "Ribeye", serif;
+}
+
 
 #betPieces {
   display: flex;
@@ -30,34 +58,13 @@ h1.titleLuck {
   justify-content: center;
 }
 
-.ribeye-regular {
-  font-family: "Ribeye", serif;
-  font-weight: 400;
-  font-style: normal;
-}
 
-.goal {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  text-align: center;
-  font-family: "Ribeye", serif;
-  font-weight: 0px;
-  margin: 20px;
-}
 
 .inst {
   text-align: center;
   font-family: "Ribeye", serif;
 }
 
-.titleLuck {
-  display: inline-flex;
-  align-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-  font-family: "Ribeye", serif;
-}
 
 .betPick {
   text-align: center;

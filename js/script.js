@@ -1,4 +1,6 @@
 /*-------------------------------- Variables --------------------------------*/
+let onePlayer = ''
+let twoPlayers = ''
 let selectedBetColor = "";
 let selectedBoardColor = "";
 let hiddenColors = [];
@@ -16,7 +18,8 @@ const betButton = document.querySelector(".betbBtn");
 const replayButton = document.querySelector(".replayBtn");
 const scoreDisplay = document.querySelector(".scoreDisplay");
 const scoreText = document.createElement("span");
-
+const onePlayerBtn = document.querySelector(".onePlayer")
+const teoPlayersBtn = document.querySelector(".twoPlayers")
 /*------------------------ Event Listeners ------------------------*/
 // Caching bet options
 blueBet.addEventListener("click", () => selectBetColor("🟦", blueBet));
