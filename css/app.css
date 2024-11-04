@@ -217,3 +217,10 @@ div.scoreDisplay {
   border: 10px;
   border-color: black;
 }
+
+
+
+.instruct {
+  margin-top: 10px;
+  border-radius: 8px;
+}

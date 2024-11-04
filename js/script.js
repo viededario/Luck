@@ -7,6 +7,7 @@ let hiddenColors = [];
 let betCount = 0;
 let score = 0;
 let gameOver = null;
+let instructionsVisible = false;  
 let chosenSpots = new Set(); // prevent multiple bets at the same spot
 
 /*------------------------ Cached Element References ------------------------*/
@@ -19,7 +20,11 @@ const replayButton = document.querySelector(".replayBtn");
 const scoreDisplay = document.querySelector(".scoreDisplay");
 const scoreText = document.createElement("span");
 const onePlayerBtn = document.querySelector(".onePlayer")
-const teoPlayersBtn = document.querySelector(".twoPlayers")
+const twoPlayersBtn = document.querySelector(".twoPlayers")
+const instructions = document.querySelector(".instruct")
+const goalText = document.querySelector(".goal")  
+goalText.style.display = "none";  
+
 /*------------------------ Event Listeners ------------------------*/
 // Caching bet options
 blueBet.addEventListener("click", () => selectBetColor("🟦", blueBet));
@@ -34,6 +39,10 @@ boardChoices.forEach((choice, index) => {
 // Cached Buttons
 betButton.addEventListener("click", placeBet);
 replayButton.addEventListener("click", resetGame);
+
+// Add instruction button event listener
+instructions.addEventListener("click", toggleInstructions);
+
 
 /*-------------------------------- Setup Hidden Colors --------------------------------*/
 
@@ -80,10 +89,8 @@ function placeBet() {
   chosenSpots.add(selectedBoardColor);
 
   if (chosenColor === selectedBetColor) {
-    // If correct, award points based on color
     score += chosenColor === "🟪" ? 5 : 1;
   } else {
-    // If incorrect, deduct points based on color
     score -= selectedBetColor === "🟪" ? 5 : 1;
   }
 
@@ -101,9 +108,9 @@ function updateScore() {
 
 function displayEndMessage() {
   if (score >= 8) {
-    scoreDisplay.textContent = `Score: ${score}   You Won! You Are A Lucky One!`;
+    scoreDisplay.textContent = `Score: ${score}:   You Won! You Are A Lucky One!`;
   } else {
-    scoreDisplay.textContent = `Score: ${score}   You Lost, Better Luck Next Time!`;
+    scoreDisplay.textContent = `Score: ${score}:   You Lost, Better Luck Next Time!`;
   }
 }
 
@@ -122,8 +129,21 @@ function resetGame() {
   updateScore();
 }
 
-scoreText.textContent = `Score: ${score}`;
-scoreDisplay.appendChild(scoreText);
 
-setUpHiddenColors();
-updateScore();
+
+function toggleInstructions() {
+    if (instructionsVisible) {
+      goalText.style.display = "none";
+      instructionsVisible = false;
+    } else {
+      goalText.style.display = "flex";
+      instructionsVisible = true;
+    }
+  }
+  
+  scoreText.textContent = `Score: ${score}`;
+  scoreDisplay.appendChild(scoreText);
+  
+  setUpHiddenColors();
+  updateScore();
+
