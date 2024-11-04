@@ -101,9 +101,9 @@ function updateScore() {
 
 function displayEndMessage() {
   if (score >= 8) {
-    scoreDisplay.textContent = `Score: ${score} — You Won! You Are A Lucky One!`;
+    scoreDisplay.textContent = `Score: ${score}   You Won! You Are A Lucky One!`;
   } else {
-    scoreDisplay.textContent = `Score: ${score} — You Lost, Better Luck Next Time!`;
+    scoreDisplay.textContent = `Score: ${score}   You Lost, Better Luck Next Time!`;
   }
 }
 
