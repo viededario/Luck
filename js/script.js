@@ -23,12 +23,10 @@ blueBet.addEventListener("click", () => selectBetColor("🟦", blueBet));
 redBet.addEventListener("click", () => selectBetColor("🟥", redBet));
 purpleBet.addEventListener("click", () => selectBetColor("🟪", purpleBet));
 
-
 // Caching All Board Pieces
 boardChoices.forEach((choice, index) => {
   choice.addEventListener("click", () => selectBoardColor(index, choice));
 });
-
 
 // Cached Buttons
 betButton.addEventListener("click", placeBet);
