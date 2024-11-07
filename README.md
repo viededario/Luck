@@ -26,9 +26,9 @@ https://claude.ai/
 
 
 # ACCESS
-https://github.com/viededario/Luck/tree/main
+GitHub: https://github.com/viededario/Luck/tree/main
 
-https://testurluuck.netlify.app/
+Deployed Link: https://testurluuck.netlify.app/
 
 
 
