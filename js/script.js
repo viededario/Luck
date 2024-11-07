@@ -1,13 +1,11 @@
 /*-------------------------------- Variables --------------------------------*/
-let onePlayer = ''
-let twoPlayers = ''
 let selectedBetColor = "";
 let selectedBoardColor = "";
 let hiddenColors = [];
 let betCount = 0;
 let score = 0;
 let gameOver = null;
-let instructionsVisible = false;  
+let instructionsVisible = false;
 let chosenSpots = new Set(); // prevent multiple bets at the same spot
 
 /*------------------------ Cached Element References ------------------------*/
@@ -19,11 +17,9 @@ const betButton = document.querySelector(".betbBtn");
 const replayButton = document.querySelector(".replayBtn");
 const scoreDisplay = document.querySelector(".scoreDisplay");
 const scoreText = document.createElement("span");
-const onePlayerBtn = document.querySelector(".onePlayer")
-const twoPlayersBtn = document.querySelector(".twoPlayers")
-const instructions = document.querySelector(".instruct")
-const goalText = document.querySelector(".goal")  
-goalText.style.display = "none";  
+const instructions = document.querySelector(".instruct");
+const goalText = document.querySelector(".goal");
+goalText.style.display = "none";
 
 /*------------------------ Event Listeners ------------------------*/
 // Caching bet options
@@ -42,7 +38,6 @@ replayButton.addEventListener("click", resetGame);
 
 // Add instruction button event listener
 instructions.addEventListener("click", toggleInstructions);
-
 
 /*-------------------------------- Setup Hidden Colors --------------------------------*/
 
@@ -77,17 +72,17 @@ function selectBoardColor(index, element) {
   boardChoices.forEach((choice) => (choice.style.border = ""));
   element.style.border = "5px solid red";
 }
-
+// For Selection of bet Color and board spot
 function placeBet() {
   if (selectedBetColor === "" || selectedBoardColor === "") return;
-
+  //prevents bet in same spot
   if (chosenSpots.has(selectedBoardColor)) return;
-
+  // reveals hidden colors
   const chosenColor = hiddenColors[selectedBoardColor];
   const selectedTile = boardChoices[selectedBoardColor];
   selectedTile.textContent = chosenColor;
   chosenSpots.add(selectedBoardColor);
-
+  // processes scores
   if (chosenColor === selectedBetColor) {
     score += chosenColor === "🟪" ? 5 : 1;
   } else {
@@ -113,7 +108,7 @@ function displayEndMessage() {
     scoreDisplay.textContent = `Score: ${score}:   You Lost, Better Luck Next Time!`;
   }
 }
-
+// clears all choices, reshuffle colors and resets game
 function resetGame() {
   score = 0;
   betCount = 0;
@@ -122,6 +117,7 @@ function resetGame() {
   chosenSpots.clear();
   setUpHiddenColors();
   boardChoices.forEach((choice) => {
+    //return board to black and white
     choice.textContent = choice.classList.contains("black") ? "⬛" : "⬜";
   });
   scoreDisplay.textContent = "Score: ";
@@ -129,21 +125,19 @@ function resetGame() {
   updateScore();
 }
 
-
-
+// whether instructions are visible or not
 function toggleInstructions() {
-    if (instructionsVisible) {
-      goalText.style.display = "none";
-      instructionsVisible = false;
-    } else {
-      goalText.style.display = "flex";
-      instructionsVisible = true;
-    }
+  if (instructionsVisible) {
+    goalText.style.display = "none";
+    instructionsVisible = false;
+  } else {
+    goalText.style.display = "flex";
+    instructionsVisible = true;
   }
-  
-  scoreText.textContent = `Score: ${score}`;
-  scoreDisplay.appendChild(scoreText);
-  
-  setUpHiddenColors();
-  updateScore();
+}
 
+scoreText.textContent = `Score: ${score}`;
+scoreDisplay.appendChild(scoreText);
+
+setUpHiddenColors(); // shuffle colors on board
+updateScore(); // insure score is correct as game goes on
