@@ -1,6 +1,7 @@
 # Luck
 
-![LUCK](https://github.com/user-attachments/assets/870c8f3b-9f28-402a-9080-70feaed1441d)
+![Luck 3](https://github.com/user-attachments/assets/d2ce4bc3-c7a7-4fb0-ad2c-290865b4a214)
+
 
 
 # DESCRIPTION
@@ -8,6 +9,9 @@ For this projoect I wanted to include the subjects we have covered so far the co
 Luck is a guessing game. In the game a player gets to select one of the three bet options, red, blue or purple, then select  a tile on the board where they think it might be hidden and click on the BET button to place their bet. Underneath all the black and white pieces random red, blue and purple are hidden. The player gets points for guessing the right color. there are 15 random red and blue hidden, each worth one point. By guessing it correctly the player gets a point. If not, the player loses a point. there is only one hidden purple it is worth five points, just like the other ones if the player matches the color they receive five points. Otherwise, OOF! 
 The game is won when the player has a score of 8 points or more.
 
+
+# How It Is Played
+![Luck 2](https://github.com/user-attachments/assets/2272e6a2-b318-4f50-9268-6083b6927f32)
 
 
 
