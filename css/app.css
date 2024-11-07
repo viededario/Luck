@@ -7,13 +7,11 @@ body {
   font: DynaPuff;
 }
 
-
 .ribeye-regular {
   font-family: "Ribeye", serif;
   font-weight: 400;
   font-style: normal;
 }
-
 
 h1.titleLuck {
   display: flex;
@@ -33,7 +31,6 @@ h1.titleLuck {
   margin: 20px;
 }
 
-
 .titleLuck {
   display: inline-flex;
   align-content: center;
@@ -41,7 +38,6 @@ h1.titleLuck {
   flex-wrap: wrap;
   font-family: "Ribeye", serif;
 }
-
 
 #betPieces {
   display: flex;
@@ -58,13 +54,10 @@ h1.titleLuck {
   justify-content: center;
 }
 
-
-
 .inst {
   text-align: center;
   font-family: "Ribeye", serif;
 }
-
 
 .betPick {
   text-align: center;
@@ -83,7 +76,6 @@ h1.titleLuck {
   height: 400px;
   justify-content: center;
   padding: 10px;
-  /* margin-left: 570px; */
 }
 
 .first {
@@ -99,9 +91,6 @@ h1.titleLuck {
   cursor: pointer;
 }
 
-/* border: 2px solid white;
-block-size: in;
-border-radius: 5vh;} */
 
 .bet {
   display: inline-flex;
@@ -173,13 +162,6 @@ p {
 }
 
 .btn {
-  /* padding: 10px;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    flex-direction: column; */
   padding: 10px;
   display: flex;
   flex-wrap: nowrap;
@@ -199,16 +181,6 @@ p {
   border-radius: 8px;
 }
 
-.onePlayer {
-  border-radius: 8px;
-  /* cursor: pointer; */
-}
-
-.twoPlayers {
-  border-radius: 8px;
-  /* cursor: pointer; */
-}
-
 div.scoreDisplay {
   display: flex;
   align-items: center;
@@ -218,9 +190,8 @@ div.scoreDisplay {
   border-color: black;
 }
 
-
-
 .instruct {
+  cursor: pointer;
   margin-top: 10px;
   border-radius: 8px;
 }
