@@ -1,5 +1,7 @@
 # Luck
 
+![LUCK](https://github.com/user-attachments/assets/870c8f3b-9f28-402a-9080-70feaed1441d)
+
 
 # DESCRIPTION
 For this projoect I wanted to include the subjects we have covered so far the course and and incorporated them in building the game. It's my first time ever coding, therfore, I've tried something that was manageable for my level and used some recources to help me accomplish this task. They will later be mentioned . I named this project LUCK!
