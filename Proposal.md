@@ -45,8 +45,8 @@ if the player’s final score if less than 8 they will lose the game.
 - Step 7: Display Final Message for if score is equal or greater than 8, or less than 8
                    Message depending on final score
 
-![7D0A9AA1-AB2F-4E15-A2D2-0B7E58E294F5](https://github.com/user-attachments/assets/2c8a8b5e-314f-41ba-9800-b05946a6891a)
 
+![LUCK](https://github.com/user-attachments/assets/870c8f3b-9f28-402a-9080-70feaed1441d)
 
 
 
