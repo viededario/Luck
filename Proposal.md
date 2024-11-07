@@ -13,7 +13,10 @@ if they get the wrong color they will have a point deducted from them.
 There will be 16 squares on the board, if the player scores  8 or more they win the game. 
 if the player’s final score if less than 8 they will lose the game.
 
- 
+
+
+ # MVP
+
   User Stories
 - AAU I should be able to see the objective of the game 
 - AAU I should be able to see and select my bet options.�
